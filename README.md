@@ -43,7 +43,9 @@ Username: admin
 Password: password
 </pre>
 
-![Step2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%20login.png?raw=true) ![step2 2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%202nd.png?raw=true)
+![Step2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%20login.png?raw=true) 
+
+![step2 2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%202nd.png?raw=true)
 
 ### Step 3: Apply Filter
 
@@ -51,7 +53,7 @@ Use the following filter in Wireshark:
 
 ``` http.request.method == POST ```
 
- Screenshot: step3_filter.png
+![step3](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%203.png?raw=true)
 
 ### Step 4: Find Credentials Using Packet Search
 
@@ -64,7 +66,7 @@ Use the following filter in Wireshark:
 
 - Click **Find / Next** to locate packets containing password fields  
 
-📸 Screenshot: step4_search.png  
+![step4](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%204.png?raw=true) 
 
 This method helps quickly locate sensitive fields within captured traffic without manually inspecting each packet.
 
@@ -76,7 +78,9 @@ This method helps quickly locate sensitive fields within captured traffic withou
 After capturing the login request, the credentials were visible in plaintext within the HTTP POST request.
 To further verify the activity, the TCP stream was analyzed to view the complete communication between client and server. This provided a clearer view of how the credentials were transmitted.
 
-📸 Screenshot: step6_tcpstream.png
+![step5](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/Step%205.jpeg?raw=true)
+
+![step5 2nd](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%205%202nd.png?raw=true)
 
 ## Key Observation
 
