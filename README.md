@@ -46,8 +46,6 @@ Password: password
 
 ![Step2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%20login.png?raw=true) 
 
-![step2 2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%202nd.png?raw=true)
-
 ### Step 3: Apply Filter
 
 Use the following filter in Wireshark:
