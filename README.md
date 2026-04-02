@@ -85,10 +85,25 @@ To further verify the activity, the TCP stream was analyzed to view the complete
 
 The login credentials were visible in plaintext within the HTTP request, showing that data transmitted over HTTP is not secure.
 
+## HTTPS Observation
+
+To compare with HTTP, the same login activity was performed on a website using HTTPS.
+
+- No HTTP POST requests were visible in Wireshark
+- Filtering for `http.request.method == POST` returned no results
+- Network traffic appeared as TLS, indicating that the data was encrypted
+
+This experiment clearly proves that HTTP is vulnerable to credential harvesting attacks using tools like Wireshark, while HTTPS encrypts all data using TLS protocol making interception impossible. Therefore all websites handling sensitive user data must use HTTPS protocol
+
+📸 Screenshot: https_login.png
+📸 Screenshot: no_post_filter.png
+📸 Screenshot: tls_encrypted.png
+
+
 ## What I Learned
 
-- How to capture network traffic using Wireshark
-- How HTTP POST requests work
+- How to capture and analyze network traffic using Wireshark
+- How HTTP POST requests transmit data
 - How to inspect packet details and payload
 - How credentials can be exposed over insecure protocols
 
