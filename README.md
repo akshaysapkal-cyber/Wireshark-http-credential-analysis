@@ -68,7 +68,7 @@ Use the following filter in Wireshark:
 
 ![step4](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%204.png?raw=true) 
 
-This method helps quickly locate sensitive fields within captured traffic without manually inspecting each packet.
+The credentials were successfully located within the packet details using the search functionality. To further validate the findings, the TCP stream was analyzed to confirm the transmitted data.
 
 ### Step 5: Follow TCP Stream
 
