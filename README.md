@@ -50,9 +50,10 @@ Screenshot: step2_login.png
 Use the following filter in Wireshark:
 
 ``` http.request.method == POST ```
+
  Screenshot: step3_filter.png
 
-## Step 4: Find Credentials Using Packet Search
+### Step 4: Find Credentials Using Packet Search
 
 - In Wireshark, go to: **Edit → Find Packet**
 
@@ -72,9 +73,10 @@ This method helps quickly locate sensitive fields within captured traffic withou
 - Right click on packet → Follow → TCP Stream
 - View full request including transmitted data
 
+After capturing the login request, the credentials were visible in plaintext within the HTTP POST request.
+To further verify the activity, the TCP stream was analyzed to view the complete communication between client and server. This provided a clearer view of how the credentials were transmitted.
+
 📸 Screenshot: step6_tcpstream.png
-
-
 
 ## Key Observation
 
