@@ -49,9 +49,7 @@ Screenshot: step2_login.png
 
 Use the following filter in Wireshark:
 
-``` 
-http.request.method == "POST"
-```
+<pre> http.request.method == POST </pre>
  Screenshot: step3_filter.png
 
 ## Step 4: Find Credentials Using Packet Search
