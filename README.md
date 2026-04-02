@@ -63,7 +63,7 @@ Use the following filter in Wireshark:
   - Enter → `password`  
   - Search in → Packet Details  
 
-- Click **Find / Next** to locate packets containing password fields  
+- Click **Find** to locate packets containing password fields  
 
 ![step4](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%204.png?raw=true) 
 
