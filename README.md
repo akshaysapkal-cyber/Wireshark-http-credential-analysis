@@ -37,10 +37,11 @@ Screenshot: step1_capture.png
 - Open browser on Windows machine
 - Visit: http://moviescope.com
 - Enter dummy credentials used for this lab:
-'''
+<pre>
 Username: sam
 Password: test
-'''
+</pre>
+
 Screenshot: step2_login.png
 
 ### Step 3: Apply Filter
