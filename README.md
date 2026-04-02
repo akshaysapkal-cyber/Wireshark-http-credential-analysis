@@ -8,6 +8,7 @@ In this project, I created a lab using Kali Linux and a Windows machine to obser
 
 - Attacker Machine: Kali Linux (Wireshark)
 - Target Machine: Windows
+- Website Used: Metasploitable 2
 - Network: Same local network
 - Protocol Used: HTTP
 
@@ -15,8 +16,8 @@ In this project, I created a lab using Kali Linux and a Windows machine to obser
 
 - Wireshark
 - Kali Linux
+- Metasploitable 2 web browser
 - Windows OS
-- Web Browser
 
 ## Objective
 
@@ -35,11 +36,11 @@ Screenshot: step1_capture.png
 ### Step 2: Perform Login
 
 - Open browser on Windows machine
-- Visit: http://www.moviescope.com
+- Visit: http://metasploitable-ip.com
 - Enter dummy credentials used for this lab:
 <pre>
-Username: sam
-Password: test
+Username: admin
+Password: password
 </pre>
 
 Screenshot: step2_login.png
@@ -48,16 +49,25 @@ Screenshot: step2_login.png
 
 Use the following filter in Wireshark:
 
-<pre> http.request.method == POST </pre>
-
+``` 
+http.request.method == "POST"
+```
  Screenshot: step3_filter.png
 
-### Step 4: Identify Request
+## Step 4: Find Credentials Using Packet Search
 
-- Locate the POST request packet
-- Verify source (Windows machine) and destination (server)
+- In Wireshark, go to: **Edit → Find Packet**
 
- Screenshot: step4_packet.png
+- In the search window:
+  - Set **Find By** → String  
+  - Enter → `password`  
+  - Search in → Packet Details  
+
+- Click **Find / Next** to locate packets containing password fields  
+
+📸 Screenshot: step4_search.png  
+
+This method helps quickly locate sensitive fields within captured traffic without manually inspecting each packet.
 
 ### Step 5: Follow TCP Stream
 
@@ -66,20 +76,7 @@ Use the following filter in Wireshark:
 
 📸 Screenshot: step6_tcpstream.png
 
-## Step 6: Find Credentials Using Packet Search
 
-- In Wireshark, go to: **Edit → Find Packet**
-
-- In the search window:
-  - Set **Find By** → String  
-  - Enter → `pwd`  
-  - Search in → Packet Details  
-
-- Click **Find / Next** to locate packets containing password fields  
-
-📸 Screenshot: step7_search.png  
-
-This method helps quickly locate sensitive fields within captured traffic without manually inspecting each packet.
 
 ## Key Observation
 
