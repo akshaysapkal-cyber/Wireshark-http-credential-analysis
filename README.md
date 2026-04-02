@@ -31,7 +31,7 @@ To capture and analyze HTTP POST requests and observe how sensitive data like lo
 - Select the active network interface (eth0 / wlan0)
 - Start packet capture
 
-Screenshot: step1_capture.png
+![Step1](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%201%20wireshark.png?raw=true) 
 
 ### Step 2: Perform Login
 
@@ -43,7 +43,7 @@ Username: admin
 Password: password
 </pre>
 
-Screenshot: step2_login.png
+![Step2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%20login.png?raw=true) ![step2 2](https://github.com/akshaysapkal-cyber/Wireshark-http-credential-analysis/blob/main/Screenshots/step%202%202nd.png?raw=true)
 
 ### Step 3: Apply Filter
 
