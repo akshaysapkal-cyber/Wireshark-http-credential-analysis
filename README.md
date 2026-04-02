@@ -37,6 +37,7 @@ To capture and analyze HTTP POST requests and observe how sensitive data like lo
 
 - Open browser on Windows machine
 - Visit: http://metasploitable-ip.com
+- Click on DVWA (This is login form)
 - Enter dummy credentials used for this lab:
 <pre>
 Username: admin
