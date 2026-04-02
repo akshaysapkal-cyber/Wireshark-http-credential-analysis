@@ -35,7 +35,7 @@ Screenshot: step1_capture.png
 ### Step 2: Perform Login
 
 - Open browser on Windows machine
-- Visit: http://moviescope.com
+- Visit: http://www.moviescope.com
 - Enter dummy credentials used for this lab:
 <pre>
 Username: sam
@@ -59,19 +59,27 @@ Use the following filter in Wireshark:
 
  Screenshot: step4_packet.png
 
-### Step 5: Inspect Packet
-
-- Go to: Packet Details → Hypertext Transfer Protocol
-- Expand form data section
-
-📸 Screenshot: step5_details.png
-
-### Step 6: Follow TCP Stream
+### Step 5: Follow TCP Stream
 
 - Right click on packet → Follow → TCP Stream
 - View full request including transmitted data
 
 📸 Screenshot: step6_tcpstream.png
+
+## Step 6: Find Credentials Using Packet Search
+
+- In Wireshark, go to: **Edit → Find Packet**
+
+- In the search window:
+  - Set **Find By** → String  
+  - Enter → `pwd`  
+  - Search in → Packet Details  
+
+- Click **Find / Next** to locate packets containing password fields  
+
+📸 Screenshot: step7_search.png  
+
+This method helps quickly locate sensitive fields within captured traffic without manually inspecting each packet.
 
 ## Key Observation
 
