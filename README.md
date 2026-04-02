@@ -44,7 +44,7 @@ Screenshot: step2_login.png
 
 Use the following filter in Wireshark:
 
-<pre> ```bash http.request.method == "POST" ``` </pre>
+<pre> http.request.method == POST </pre>
 
  Screenshot: step3_filter.png
 
