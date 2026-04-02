@@ -78,9 +78,11 @@ The login credentials were visible in plaintext within the HTTP request, showing
 ## HTTPS Observation
 To compare with HTTP, the same login activity was performed on a website using HTTPS.
 
-- No HTTP POST requests were visible in Wireshark
-- Filtering for `http.request.method == POST` returned no results
-- Network traffic appeared as TLS, indicating that the data was encrypted
+As shown in Screenshot 1, the GitHub login page was accessed and credentials were entered.
+
+In Screenshot 2, when the filter ```http.request.method == POST``` was applied in Wireshark, no results were found. The capture was completely empty, proving that HTTPS does not transmit credentials in plain text.
+
+In Screenshot 3, when the filter ```tls``` was applied, only encrypted Application Data packets were visible. The payload showed only encrypted hexadecimal data which is completely unreadable, confirming that TLS encryption successfully protects user credentials from packet sniffing attacks.
 
 This experiment clearly proves that HTTP is vulnerable to credential harvesting attacks using tools like Wireshark, while HTTPS encrypts all data using TLS protocol making interception impossible. Therefore all websites handling sensitive user data must use HTTPS protocol
 
